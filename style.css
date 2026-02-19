@@ -1,338 +1,187 @@
 /* =========================================
-   1. CONFIGURATION GÉNÉRALE & COULEURS LUXE
+   1. VARIABLES & FONDAMENTAUX (Look Editorial)
 ========================================= */
 :root {
-    --luxury-bordeaux: #3a0e13; /* Le fond grenat foncé */
-    --luxury-gold: #d4af6e;     /* Le doré riche des textes */
-    --cream-text: #f8f1e5;      /* Couleur de texte doux */
-    --dark-accent: #22080b;     /* Pour des fonds encore plus sombres */
+    --bg-cream: #f4eee8;        /* Beige doux des images */
+    --accent-gold: #a67c52;     /* Bronze/Or mat */
+    --deep-bordeaux: #3a0e13;   /* Gardé pour les accents profonds */
+    --text-main: #4a3f35;       /* Marron chaud foncé pour le texte */
+    --pure-white: #ffffff;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--luxury-bordeaux);
-    color: var(--cream-text);
-}
-
-h1, h2, h3, .logo, .winner-label, .category, .btn-text {
-    font-family: 'Playfair Display', serif;
-    color: var(--luxury-gold);
+    background-color: var(--bg-cream);
+    color: var(--text-main);
+    line-height: 1.6;
 }
 
 /* =========================================
-   2. NAVIGATION (HEADER)
+   2. TYPOGRAPHIE (Effet Magazine)
+========================================= */
+h1, h2, h3, .logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--text-main);
+    font-weight: 500;
+}
+
+.logo {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: var(--accent-gold);
+}
+
+/* =========================================
+   3. NAVIGATION (Minimaliste)
 ========================================= */
 header {
-    background-color: var(--dark-accent);
-    padding: 1rem 5%;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    border-bottom: 1px solid rgba(212, 175, 110, 0.2); /* Légère ligne dorée */
+    background-color: transparent;
+    padding: 2rem 5%;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    border-bottom: 1px solid rgba(166, 124, 82, 0.2);
+    padding-bottom: 1.5rem;
 }
 
 nav ul {
     list-style: none;
     display: flex;
-    gap: 25px;
-    margin: 0;
-    padding: 0;
+    gap: 35px;
 }
 
 nav a {
     text-decoration: none;
-    color: var(--cream-text);
-    font-weight: 400;
+    color: var(--text-main);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     transition: 0.3s;
-    font-size: 0.95rem;
 }
 
-nav a:hover {
-    color: var(--luxury-gold);
-}
+nav a:hover { color: var(--accent-gold); }
 
 /* =========================================
-   3. HERO SECTION (ACCUEIL)
+   4. HERO SECTION (L'Impact)
 ========================================= */
 .hero {
-    height: 80vh;
-    /* On garde une image de fond, mais on la teinte en bordeaux */
-    background: linear-gradient(rgba(58, 14, 19, 0.7), rgba(58, 14, 19, 0.7)),
-                url('https://images.unsplash.com/photo-1571934811356-5cc52764895b?auto=format&fit=crop&w=1350&q=80');
+    height: 70vh;
+    background: linear-gradient(rgba(244, 238, 232, 0.7), rgba(244, 238, 232, 0.7)),
+                url('https://images.unsplash.com/photo-1594631252845-29fc4cc8cde9?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     text-align: center;
-    border-bottom: 2px solid var(--luxury-gold);
 }
 
 .hero-content h1 {
     font-size: 4rem;
-    margin-bottom: 1rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
 }
 
-.cta-button, .read-more {
-    display: inline-block;
-    padding: 15px 40px;
-    background-color: var(--luxury-gold);
-    color: var(--luxury-bordeaux);
+.cta-button {
+    background-color: var(--accent-gold);
+    color: var(--pure-white);
+    padding: 15px 45px;
+    border-radius: 50px; /* Forme pilule chic */
     text-decoration: none;
-    border-radius: 50px;
-    font-weight: bold;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: 0.3s all;
-    box-shadow: 0 5px 15px rgba(212, 175, 110, 0.3);
+    letter-spacing: 2px;
+    transition: 0.4s;
 }
 
-.cta-button:hover, .read-more:hover {
+.cta-button:hover {
+    background-color: var(--text-main);
     transform: translateY(-3px);
-    background-color: #eac78a; /* Doré plus clair au survol */
-    box-shadow: 0 10px 20px rgba(212, 175, 110, 0.4);
 }
 
 /* =========================================
-   4. SECTIONS COMMUNES
+   5. CONCEPT & GRILLES (Espacement aéré)
 ========================================= */
-main { padding: 60px 10%; }
-
-.section-title {
-    text-align: center;
-    font-size: 3rem;
-    margin-bottom: 50px;
-    color: var(--luxury-gold);
-}
-
-/* CONCEPT (Accueil) */
 .concept {
     display: flex;
-    justify-content: space-around;
     padding: 100px 10%;
-    background-color: var(--dark-accent);
-    text-align: center;
+    background-color: var(--pure-white);
+    gap: 50px;
 }
 
 .step {
     flex: 1;
-    padding: 30px;
-    border-right: 1px solid rgba(212, 175, 110, 0.2);
+    text-align: center;
 }
-.step:last-child { border-right: none; }
 
-.step h3 { font-size: 2rem; margin-bottom: 15px; }
+.step h3 { font-size: 1.5rem; color: var(--accent-gold); }
 
-/* =========================================
-   5. PAGE PARFUMS (Nos Thés)
-========================================= */
+/* CARTES DE THÉS */
 .tea-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    margin-top: 40px;
+    padding: 40px 0;
 }
 
 .tea-card {
-    padding: 40px;
-    border-radius: 20px;
-    cursor: pointer;
-    transition: 0.4s all;
-    text-align: center;
-    background: var(--dark-accent); /* Fond sombre par défaut */
-    border: 1px solid rgba(212, 175, 110, 0.1);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    background: var(--pure-white);
+    padding: 50px 30px;
+    border-radius: 4px; /* Carré presque parfait, très luxe */
+    border: none;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    transition: 0.4s ease;
 }
 
-.tea-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--luxury-gold);
-    box-shadow: 0 20px 40px rgba(212, 175, 110, 0.2);
-}
-
-.tea-icon { font-size: 3rem; margin-bottom: 15px; }
-.tea-card h3 { margin: 0; font-size: 1.5rem; }
-
-/* MODAL (Pop-out) */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 2000;
-    left: 0; top: 0; width: 100%; height: 100%;
-    background-color: rgba(0,0,0,0.85);
-    backdrop-filter: blur(5px);
-}
-
-.modal-content {
-    background-color: var(--luxury-bordeaux);
-    margin: 10% auto;
-    padding: 50px;
-    width: 50%;
-    border-radius: 25px;
-    position: relative;
-    border: 2px solid var(--luxury-gold);
-    box-shadow: 0 25px 50px rgba(0,0,0,0.5);
-}
-
-.close {
-    position: absolute;
-    right: 30px; top: 20px;
-    font-size: 40px;
-    color: var(--luxury-gold);
-    cursor: pointer;
-}
+.tea-card:hover { transform: translateY(-10px); box-shadow: 0 20px 50px rgba(0,0,0,0.06); }
 
 /* =========================================
-   6. GOSSIP ROOM (Puzzle)
+   6. GOSSIP ROOM (Puzzle Style Sceau)
 ========================================= */
-.gossip-container h1 { margin-bottom: 10px; }
-.subtitle { color: var(--cream-text); margin-bottom: 50px; }
-
 .puzzle-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 160px);
-    gap: 15px;
-    justify-content: center;
-    margin: 50px auto;
+    gap: 20px;
 }
 
 .puzzle-piece {
-    width: 160px; height: 160px;
-    background-color: var(--dark-accent);
-    color: var(--luxury-gold);
-    display: flex;
-    align-items: center; justify-content: center;
-    font-size: 2.5rem;
-    font-family: 'Playfair Display', serif;
-    cursor: pointer;
-    border: 2px solid rgba(212, 175, 110, 0.3);
-    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
-    overflow: hidden;
-    border-radius: 10px;
+    background-color: var(--pure-white);
+    border: 1px solid rgba(166, 124, 82, 0.3);
+    color: var(--accent-gold);
+    border-radius: 0;
+    font-weight: 300;
 }
-
-.puzzle-piece:hover { border-color: var(--luxury-gold); box-shadow: 0 0 20px rgba(212, 175, 110, 0.2); }
 
 .puzzle-piece.revealed {
-    background-color: var(--luxury-gold);
-    color: var(--luxury-bordeaux);
-    border: 2px solid var(--luxury-gold);
-    font-size: 1rem;
-    font-family: 'Poppins', sans-serif;
-    transform: rotateY(180deg);
-    padding: 10px;
-    text-align: center;
+    background-color: var(--accent-gold);
+    color: var(--pure-white);
+    transform: scale(1.05);
 }
-
-.full-gossip-box {
-    margin-top: 60px;
-    padding: 40px;
-    background: var(--dark-accent);
-    border: 1px solid var(--luxury-gold);
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.3);
-    min-height: 120px;
-    position: relative;
-}
-.full-gossip-box::before { content: '🤫'; position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-size: 3rem; background: var(--luxury-bordeaux); padding: 0 15px; }
 
 /* =========================================
-   7. PAGE GAGNANTS
+   7. MODAL & WHATSAPP
 ========================================= */
-.winner-card.gold {
-    background: linear-gradient(135deg, var(--luxury-gold), #eac78a);
-    border: none;
-    padding: 50px;
-    border-radius: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 60px;
-    box-shadow: 0 20px 40px rgba(212, 175, 110, 0.3);
-    color: var(--luxury-bordeaux);
+.modal-content {
+    background-color: var(--bg-cream);
+    border: 1px solid var(--accent-gold);
+    border-radius: 0;
 }
-
-.winner-card.gold h2, .winner-card.gold .winner-name, .winner-card.gold .week-label {
-    color: var(--luxury-bordeaux);
-}
-
-.prize-tag {
-    background-color: var(--luxury-bordeaux);
-    color: var(--luxury-gold);
-    padding: 15px 30px;
-    border-radius: 50px;
-    font-weight: bold;
-    border: 1px solid var(--luxury-gold);
-}
-
-.winners-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
-
-.winner-item {
-    background: var(--dark-accent);
-    padding: 30px;
-    border: 1px solid rgba(212, 175, 110, 0.2);
-    border-radius: 15px;
-    text-align: center;
-    transition: 0.3s;
-}
-.winner-item:hover { border-color: var(--luxury-gold); transform: translateY(-5px); }
-
-.cta-join {
-    text-align: center; margin-top: 80px; padding: 50px;
-    border-top: 1px solid rgba(212, 175, 110, 0.2);
-    background: var(--dark-accent); border-radius: 20px;
-}
-.cta-link { color: var(--luxury-gold); text-decoration: none; font-weight: bold; font-size: 1.2rem; border-bottom: 2px solid var(--luxury-gold); }
-
-/* =========================================
-   8. BLOG & FOOTER & BOUTON
-========================================= */
-.blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 40px; }
-
-.blog-card {
-    background: var(--dark-accent);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-    border: 1px solid rgba(212, 175, 110, 0.1);
-    transition: 0.3s all;
-}
-.blog-card:hover { transform: translateY(-10px); border-color: var(--luxury-gold); }
-
-.read-more { background: transparent; color: var(--luxury-gold); border: 2px solid var(--luxury-gold); margin-top: 20px; }
-.read-more:hover { background: var(--luxury-gold); color: var(--luxury-bordeaux); }
 
 .whatsapp-btn {
-    position: fixed; bottom: 30px; right: 30px;
-    background-color: var(--luxury-gold); /* Doré au lieu du vert */
-    color: var(--luxury-bordeaux);
-    padding: 15px 30px;
+    background-color: var(--accent-gold);
+    color: white;
     border-radius: 50px;
-    text-decoration: none; display: flex; align-items: center; gap: 15px;
-    box-shadow: 0 10px 25px rgba(212, 175, 110, 0.3);
-    z-index: 1000; transition: 0.3s; font-weight: bold;
 }
-.whatsapp-btn:hover { transform: scale(1.05); background-color: #eac78a; }
-.btn-icon { font-size: 1.5rem; }
 
 footer {
-    padding: 60px;
-    background-color: var(--dark-accent);
-    color: var(--luxury-gold);
+    padding: 80px 10%;
+    background-color: var(--pure-white);
     text-align: center;
-    font-size: 1rem;
-    border-top: 1px solid rgba(212, 175, 110, 0.2);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    color: var(--text-light);
 }
