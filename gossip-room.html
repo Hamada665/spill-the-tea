@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gossip Room | Spill The Tea</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Spill The Tea ☕</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parfums.html">Nos Thés</a></li>
+                <li><a href="gossip-room.html">The Gossip Room</a></li>
+                <li><a href="winners.html">Gagnants</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="gossip-container">
+        <h1>Le Gossip de la Semaine</h1>
+        <p class="subtitle">Trouvez les morceaux dans vos boîtes et assemblez le puzzle ici.</p>
+
+        <div class="puzzle-grid" id="puzzleGrid">
+            <div class="puzzle-piece" onclick="revealPiece(this, '...a été vu hier soir...')">1</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...dans le quartier de...')">2</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...avec une personne...')">3</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...très mystérieuse...')">4</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...portant un chapeau...')">5</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...ils ont échangé...')|">6</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...une enveloppe rouge...')">7</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...juste avant de...')">8</div>
+            <div class="puzzle-piece" onclick="revealPiece(this, '...disparaître dans la brume.')">9</div>
+        </div>
+
+        <div class="full-gossip-box">
+            <h3>Secret en cours de reconstruction :</h3>
+            <p id="assembledGossip">Cliquez sur les pièces que vous possédez pour lire le secret...</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
