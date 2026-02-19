@@ -295,3 +295,65 @@ footer {
     text-decoration: underline;
     font-weight: bold;
 }
+
+/* BLOG */
+.blog-container { padding: 60px 10%; }
+.blog-header { text-align: center; margin-bottom: 50px; }
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.blog-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.blog-card:hover { transform: translateY(-5px); }
+
+.blog-image { height: 250px; background-size: cover; background-position: center; }
+.blog-content { padding: 25px; }
+
+.category {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    color: var(--matcha);
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: var(--dark-ink);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid var(--dusty-rose);
+}
+
+/* BOUTON WHATSAPP FLOATING */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25D366; /* Couleur officielle WhatsApp */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover { transform: scale(1.05); background-color: #128C7E; }
+.btn-text { font-size: 0.9rem; font-weight: 500; }
+.btn-icon { font-size: 1.2rem; }
