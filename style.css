@@ -174,3 +174,52 @@ footer {
 }
 
 .close { position: absolute; right: 20px; top: 10px; font-size: 28px; cursor: pointer; }
+
+/* GOSSIP ROOM */
+.gossip-container {
+    padding: 50px 10%;
+    text-align: center;
+}
+
+.puzzle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 150px); /* 3 colonnes de 150px */
+    gap: 10px;
+    justify-content: center;
+    margin: 40px auto;
+}
+
+.puzzle-piece {
+    width: 150px;
+    height: 150px;
+    background-color: var(--dark-ink);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-family: 'Playfair Display', serif;
+    cursor: pointer;
+    border: 2px dashed var(--dusty-rose);
+    transition: all 0.5s ease;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Quand la pièce est révélée */
+.puzzle-piece.revealed {
+    background-color: var(--matcha);
+    border: 2px solid white;
+    font-size: 0.9rem;
+    font-family: 'Poppins', sans-serif;
+    transform: rotateY(360deg);
+}
+
+.full-gossip-box {
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    min-height: 100px;
+}
