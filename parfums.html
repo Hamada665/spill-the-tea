@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Thés | Spill The Tea</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">Spill The Tea ☕</div>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="parfums.html">Nos Thés</a></li>
+                <li><a href="gossip-room.html">The Gossip Room</a></li>
+                <li><a href="winners.html">Gagnants</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="tea-container">
+        <h1 class="page-title">Nos Collections Sensorielles</h1>
+        <div class="tea-grid">
+            <div class="tea-card hibiscus" onclick="openTea('hibiscus')">
+                <div class="tea-icon">🌺</div>
+                <h3>Hibiscus Tea</h3>
+            </div>
+            <div class="tea-card blueberry" onclick="openTea('blueberry')">
+                <div class="tea-icon">🫐</div>
+                <h3>Blueberry Tea</h3>
+            </div>
+            <div class="tea-card jasmine" onclick="openTea('jasmine')">
+                <div class="tea-icon">🌼</div>
+                <h3>Jasmine</h3>
+            </div>
+            <div class="tea-card chamomile" onclick="openTea('chamomile')">
+                <div class="tea-icon">🌼</div>
+                <h3>Chamomile</h3>
+            </div>
+            <div class="tea-card black" onclick="openTea('black')">
+                <div class="tea-icon">🍂</div>
+                <h3>Black Tea</h3>
+            </div>
+            <div class="tea-card mint" onclick="openTea('mint')">
+                <div class="tea-icon">🍃</div>
+                <h3>Mint Tea</h3>
+            </div>
+            <div class="tea-card masala" onclick="openTea('masala')">
+                <div class="tea-icon">🌶️</div>
+                <h3>Masala Tea</h3>
+            </div>
+            <div class="tea-card green" onclick="openTea('green')">
+                <div class="tea-icon">🌿</div>
+                <h3>Green Tea</h3>
+            </div>
+        </div>
+    </main>
+
+    <div id="teaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle">Nom du thé</h2>
+            <div class="modal-body">
+                <p><strong>L'Histoire :</strong> <span id="modalStory"></span></p>
+                <p><strong>Les Bienfaits :</strong> <span id="modalBenefits"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
