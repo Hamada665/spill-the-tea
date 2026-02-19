@@ -44,3 +44,32 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+let discoveredSecrets = ["_", "_", "_", "_", "_", "_", "_", "_", "_"];
+
+function revealPiece(element, text) {
+    // Si la pièce n'a pas encore été révélée
+    if (!element.classList.contains('revealed')) {
+        element.classList.add('revealed');
+        element.innerText = text;
+        
+        // On pourrait ici ajouter une logique pour construire le texte global
+        updateGossipDisplay();
+    }
+}
+
+function updateGossipDisplay() {
+    const revealed = document.querySelectorAll('.puzzle-piece.revealed');
+    const display = document.getElementById('assembledGossip');
+    
+    if (revealed.length === 0) {
+        display.innerText = "Le secret attend d'être découvert...";
+    } else {
+        // On récupère le texte de toutes les pièces révélées
+        let fullText = "";
+        revealed.forEach(piece => {
+            fullText += piece.innerText + " ";
+        });
+        display.innerText = fullText;
+    }
+}
