@@ -48,13 +48,16 @@ window.onclick = function(event) {
 let discoveredSecrets = ["_", "_", "_", "_", "_", "_", "_", "_", "_"];
 
 function revealPiece(element, text) {
-    // Si la pièce n'a pas encore été révélée
     if (!element.classList.contains('revealed')) {
         element.classList.add('revealed');
-        element.innerText = text;
         
-        // On pourrait ici ajouter une logique pour construire le texte global
-        updateGossipDisplay();
+        // Petit effet d'opacité pour le texte qui arrive
+        element.style.opacity = "0";
+        setTimeout(() => {
+            element.innerText = text;
+            element.style.opacity = "1";
+            updateGossipDisplay();
+        }, 200);
     }
 }
 
