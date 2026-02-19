@@ -1,0 +1,119 @@
+/* 1. CONFIGURATION GÉNÉRALE */
+:root {
+    --matcha: #8da37e;
+    --dusty-rose: #e6b8a2;
+    --dark-ink: #1a1a1a;
+    --off-white: #faf9f6;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--off-white);
+    color: var(--dark-ink);
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* 2. NAVIGATION */
+header {
+    background-color: white;
+    padding: 1rem 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--matcha);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--dark-ink);
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: var(--matcha);
+}
+
+/* 3. HERO SECTION */
+.hero {
+    height: 80vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('https://images.unsplash.com/photo-1544787210-282aa047bd17?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'); /* Image de thé classe */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--dusty-rose);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s transform;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    background-color: var(--matcha);
+}
+
+/* 4. SECTION CONCEPT */
+.concept {
+    display: flex;
+    justify-content: space-around;
+    padding: 100px 10%;
+    background-color: white;
+    text-align: center;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+}
+
+.step h3 {
+    color: var(--matcha);
+    font-size: 1.8rem;
+}
+
+/* 5. FOOTER */
+footer {
+    padding: 50px;
+    background-color: var(--dark-ink);
+    color: var(--off-white);
+    text-align: center;
+    font-size: 0.9rem;
+}
