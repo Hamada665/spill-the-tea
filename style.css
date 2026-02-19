@@ -1,31 +1,48 @@
 /* =========================================
    1. CONFIGURATION GÉNÉRALE & COULEURS LUXE
 ========================================= */
+/* =========================================
+   1. VARIABLES & THÈMES
+========================================= */
 :root {
-    --luxury-bordeaux: #3a0e13; /* Le fond grenat foncé */
-    --luxury-gold: #d4af6e;     /* Le doré riche des textes */
-    --cream-text: #f8f1e5;      /* Couleur de texte doux */
-    --dark-accent: #22080b;     /* Pour des fonds encore plus sombres */
+    /* MODE DARK (Bordeaux & Or) - Ton préféré */
+    --bg-color: #3a0e13;
+    --card-bg: #22080b;
+    --text-color: #f8f1e5;
+    --accent-gold: #d4af6e;
+    --header-bg: #22080b;
+}
+
+[data-theme="light"] {
+    /* MODE LIGHT (Or Sablé & Bordeaux) */
+    --bg-color: #f8f1e5;       /* Fond crème/sable */
+    --card-bg: #ffffff;        /* Cartes blanches */
+    --text-color: #3a0e13;     /* Texte devient Bordeaux */
+    --accent-gold: #a67c52;    /* Or plus foncé pour le contraste */
+    --header-bg: #ece5d8;      /* Header sable clair */
+}
+/* CONNEXION DES ANCIENS NOMS AUX NOUVELLES VARIABLES */
+:root {
+    --luxury-gold: var(--accent-gold);
+    --luxury-bordeaux: var(--bg-color);
+    --dark-accent: var(--card-bg);
+    --cream-text: var(--text-color);
 }
 body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: var(--luxury-bordeaux);
-    color: var(--cream-text);
-}
-h1, h2, h3, .logo, .winner-label, .category, .btn-text {
-    font-family: 'Playfair Display', serif;
-    color: var(--luxury-gold);
+    background-color: var(--bg-color); /* MODIFIÉ */
+    color: var(--text-color);           /* MODIFIÉ */
+    transition: 0.4s ease; /* Pour que le switch soit fluide */
 }
 /* =========================================
    2. NAVIGATION (HEADER)
 ========================================= */
 header {
-    background-color: var(--dark-accent);
+    background-color: var(--header-bg); /* MODIFIÉ */
     padding: 1rem 5%;
-    box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-    border-bottom: 1px solid rgba(212, 175, 110, 0.2); /* Légère ligne dorée */
+    border-bottom: 1px solid rgba(212, 175, 110, 0.2);
 }
 nav {
     display: flex;
@@ -90,7 +107,7 @@ nav a:hover {
 }
 .cta-button:hover, .read-more:hover {
     transform: translateY(-3px);
-    background-color: #eac78a; /* Doré plus clair au survol */
+    opacity: 0.8; /* Doré plus clair au survol */
     box-shadow: 0 10px 20px rgba(212, 175, 110, 0.4);
 }
 /* =========================================
@@ -285,7 +302,7 @@ main { padding: 60px 10%; }
     box-shadow: 0 10px 25px rgba(212, 175, 110, 0.3);
     z-index: 1000; transition: 0.3s; font-weight: bold;
 }
-.whatsapp-btn:hover { transform: scale(1.05); background-color: #eac78a; }
+.whatsapp-btn:hover { transform: scale(1.05); opacity: 0.8; }
 .btn-icon { font-size: 1.5rem; }
 footer {
     padding: 60px;
